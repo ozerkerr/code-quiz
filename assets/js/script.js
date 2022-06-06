@@ -79,6 +79,20 @@ function viewHighscores() {
   var storedInitials = JSON.parse(localStorage.getItem("initials"));
   var storedScores = JSON.parse(localStorage.getItem("scores"));
 
+  var list = [];
+  for (var j = 0; j < storedInitials.length; j++) {
+    list.push({ 'initials': storedInitials[j], 'scores': storedScores[j] });
+  }
+
+  list.sort(function (a, b) {
+    console.log(a, b)
+    return ((b.scores < a.scores) ? -1 : ((b.scores == a.scores) ? 0 : 1));
+  });
+
+  for (var k = 0; k < list.length; k++) {
+    storedInitials[k] = list[k].initials;
+    storedScores[k] = list[k].scores;
+  }
 
   goBack.textContent = "Go Back";
   clearHighsocres.textContent = "Clear Highscores";

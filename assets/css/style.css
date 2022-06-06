@@ -32,7 +32,8 @@ main {
 .welcome-message {
   max-width: 625px;
   margin-top: 20px;
-  font-size: 20px
+  font-size: 20px;
+  padding: 12px;
 }
 
 .fina-score {
