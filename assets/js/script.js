@@ -125,7 +125,7 @@ function viewHighscores() {
       table.append(tableItem)
     }
   }
-  scoresLabel.textContent = "Highscores"
+  scoresLabel.textContent = "High Scores"
   highScores.setAttribute("class", "highscores-label")
   highScores.append(scoresLabel, table, buttonsDiv)
   main.append(highScores)

@@ -14,7 +14,7 @@ When user lands on website, main page is displayed to them. Main page contains:
 * Name of the game
 * Paragraph with description and rules
 * Start button
-* View highsocres button
+* View high socres button
 
 ![Main Page](./assets/images/main-page.png "Main Page")
 
