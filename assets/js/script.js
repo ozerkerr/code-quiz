@@ -42,7 +42,7 @@ var questions = [
     answer: "console.log"
   },
   {
-    question: "Strig values must be enclosed within ____ when beuing assigned to variables.",
+    question: "String values must be enclosed within ____ when being assigned to variables.",
     variants: [
       "commas",
       "curly brackets",
