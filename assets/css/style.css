@@ -34,3 +34,109 @@ main {
   margin-top: 20px;
   font-size: 20px
 }
+
+.fina-score {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  max-width: 625px;
+  margin-top: 20px;
+  font-size: 20px
+}
+
+.all-done {
+  font-size: 24px;
+  font-style: "bold";
+  margin: 16px 0;
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background: #2f2f2f;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: black;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  margin: 16px 0;
+}
+
+.items-body-content {
+  text-align: left;
+  padding: 10px;
+  padding-right: 0px;
+  grid-template-columns: 10fr 1fr;
+  font-size: 13px;
+  grid-gap: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+.items-body-content:hover {
+  border-radius: 15px;
+  border: 1px solid #2f2f2f;
+}
+
+.highscores-label {
+  font-size: 24px;
+  text-align: left;
+  max-width: 625px;
+  margin-top: 20px;
+}
+
+.question {
+  width: 500px;
+}
+
+.scores-label {
+  font-size: 36px;
+}
+
+p {
+  font-family: "Dank Mono", ui-monospace, monospace;
+  text-align: left;
+}
+
+.button-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.table-row {
+  background-color: #ffffff;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  padding: 25px 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  width: 300px;
+}
+
+@media screen and (max-width: 480px) {
+  .question {
+    width: 300px;
+  }
+
+}
