@@ -258,6 +258,7 @@ function gameOver() {
 function startQuiz() {
   // Hids welcome section
   welcome.remove();
+  viewHighscoresButton.disabled = true;
   // Call display questions function
   displayQuestions();
 

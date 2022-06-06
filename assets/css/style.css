@@ -140,4 +140,20 @@ p {
     width: 300px;
   }
 
+  .highscores-label {
+    text-align: center;
+  }
+
+  .table-row {
+    width: 200px;
+  }
+
+  .button-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    margin-bottom: 12px
+  }
 }
