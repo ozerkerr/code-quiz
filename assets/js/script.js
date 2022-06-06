@@ -85,7 +85,6 @@ function viewHighscores() {
   }
 
   list.sort(function (a, b) {
-    console.log(a, b)
     return ((b.scores < a.scores) ? -1 : ((b.scores == a.scores) ? 0 : 1));
   });
 
