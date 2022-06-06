@@ -6,7 +6,8 @@ var viewHighscoresButton = document.querySelector("#highscores")
 
 var timerCount = 100;
 var questionNumber = 0;
-clearTimerCount = false;
+var clearTimerCount = false;
+var isWin = false;
 
 // Qestions data in variable
 var questions = [
@@ -179,27 +180,36 @@ function displayQuestions() {
 
   questionDisplayed.setAttribute("class", "question")
   if (questionNumber === questions.length) {
+    isWin = true;
     return endQuiz()
   }
   for (i = 0; i < questions[questionNumber].variants.length; i++) {
     questionHeader.innerHTML = questions[questionNumber].question
     newVariant = document.createElement("li");
     newVariant.innerHTML = questions[questionNumber].variants[i];
+    newVariant.setAttribute("id", "variant")
     newVariant.setAttribute("value", questions[questionNumber].variants[i])
     newVariant.setAttribute("class", "items-body-content")
 
     newVariant.addEventListener("click", function (event) {
+      var allLi = document.getElementsByTagName("li");
+
       if (event.target.getAttribute("value") === questions[questionNumber].answer) {
         questionNumber++;
         event.target.style.backgroundColor = "#3bedb7"
-
+        for (i = 0; i < allLi.length; i++) {
+          allLi[i].style.pointerEvents = "none";
+        }
         setTimeout(() => {
           questionDisplayed.remove();
-          console.log(main)
+
           displayQuestions();
         }, 1000)
 
       } else {
+        for (i = 0; i < allLi.length; i++) {
+          allLi[i].style.pointerEvents = "none";
+        }
         timerCount -= 10;
         questionNumber++;
         event.target.style.backgroundColor = "#f5625d";
@@ -229,7 +239,6 @@ function gameOver() {
     location.reload()
   })
 
-
   main.append(gameOverText, goBack)
 }
 // Start quiz function
@@ -245,7 +254,9 @@ function startQuiz() {
     displayTimer.innerHTML = timerCount;
     if (timerCount === 0 || clearTimerCount) {
       clearInterval(timerInterval);
-      gameOver()
+      if (isWin === false) {
+        gameOver()
+      }
     }
   }, 1000);
 
