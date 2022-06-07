@@ -7,6 +7,8 @@
 ![Main Page](./assets/images/Hnet-image.gif "Main Page")
 
 
+Link to the deployed application: https://ozerkerr.github.io/code-quiz/
+
 ---------
 ## Main page
 When user lands on website, main page is displayed to them. Main page contains: 
